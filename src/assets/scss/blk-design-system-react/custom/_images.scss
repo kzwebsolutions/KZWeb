@@ -4,10 +4,12 @@ img{
 }
 .img-raised{
     box-shadow: $box-shadow-raised;
+    margin-bottom: 15px;
 }
 
 .img-center {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  width: 60%;
 }

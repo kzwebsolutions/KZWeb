@@ -1,20 +1,4 @@
-/*!
 
-=========================================================
-* BLK Design System React - v1.2.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
@@ -24,9 +8,13 @@ import "assets/scss/blk-design-system-react.scss";
 import "assets/demo/demo.css";
 
 import Index from "views/Index.js";
-import LandingPage from "views/examples/LandingPage.js";
+import WorkPage from "views/examples/WorkPage.js";
+import PortPage from "views/examples/PortPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
+import AboutPage from "views/examples/AboutPage.js";
+import ContactPage from "views/examples/ContactPage";
+import ServicePage from "views/examples/ServicePage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -35,8 +23,12 @@ root.render(
     <Switch>
       <Route path="/components" render={(props) => <Index {...props} />} />
       <Route
-        path="/landing-page"
-        render={(props) => <LandingPage {...props} />}
+        path="/work-page"
+        render={(props) => <WorkPage {...props} />}
+      />
+      <Route
+        path="/port-page"
+        render={(props) => <PortPage {...props} />}
       />
       <Route
         path="/register-page"
@@ -45,6 +37,18 @@ root.render(
       <Route
         path="/profile-page"
         render={(props) => <ProfilePage {...props} />}
+      />
+      <Route
+        path="/about-page"
+        render={(props) => <AboutPage {...props} />}
+      />
+      <Route
+        path="/service-page"
+        render={(props) => <ServicePage {...props} />}
+      />
+      <Route
+        path="/contact-page"
+        render={(props) => <ContactPage {...props} />}
       />
       <Redirect from="/" to="/components" />
     </Switch>
